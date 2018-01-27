@@ -1,0 +1,76 @@
+#header,
+.site-header {
+	//border:1px solid black;
+	padding: 10px 0;
+  [class*="col-"] {
+    //border: 1px solid black;
+  }
+  .utility-menu {
+    margin: 0 15px 0 0;
+    padding: 0;
+    //border: 1px solid black;
+    justify-content: flex-end;
+    .menu-item {
+      list-style: none;
+      padding: 2px 5px;
+      font-size: smaller;
+    }
+  }
+  .search-form {
+    margin: 10px 0;
+    label {
+      span {
+        display: none;
+        visibility: hidden;
+      }
+    }
+    input {
+      padding: 10px 15px;
+      position: relative;
+      left: -5px;
+      & + input {
+        right: -5px;
+        left: 0;
+      }
+    }
+  }
+  .main-navigation {
+    .menu-toggle {
+      display: none;
+    }
+    .menu {
+      //border: 1px solid blue;
+      padding: 0;
+      margin: 10px 0;
+      justify-content: flex-end;
+      .menu-item {
+        list-style: none;
+        padding: 10px 15px;
+        //border: 1px solid green;
+        &.menu-item-has-children {
+          position: relative;
+          .sub-menu {
+            display: none;
+            position: absolute;
+            margin:0;
+            padding: 0;
+            left: 0;
+            top: 100%;
+            background-color: white;
+            z-index: 1;
+          }
+          &:hover {
+            .sub-menu {
+              display: block;
+            }
+          }
+        }
+      }
+    }    
+  }
+}
+
+/*--------------------------------------------------------------
+# Header #1
+--------------------------------------------------------------*/
+@import "_header-1";
